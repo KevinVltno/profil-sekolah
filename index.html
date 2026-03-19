@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KB &amp; TK Santa Anna Sragen</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- ══════════════════════════════════
+       POPUP MODAL PENDAFTARAN
+  ══════════════════════════════════ -->
+  <div class="popup-overlay" id="popupOverlay">
+    <div class="popup-modal popup-modal--full" id="popupModal">
+      <button class="popup-close" id="popupClose" aria-label="Tutup">✕</button>
+
+      <!-- Scroll area: gambar + teks promosi -->
+      <div class="popup-scroll-area">
+
+        <!-- Gambar penuh -->
+        <div class="popup-fullimg-wrap">
+          <img src="img/pendaftaran.jpg" alt="SPMB KB-TK Santa Anna 2026/2027" class="popup-fullimg" />
+        </div>
+
+        <!-- Teks promosi -->
+        <div class="popup-body">
+          <div class="popup-tag">Tahun Ajaran <span id="popup-tahun"></span></div>
+          <h2 class="popup-title">Daftarkan Si Kecil<br>Bersama Santa Anna! 🌟</h2>
+          <p class="popup-desc">Kami membuka pendaftaran untuk KB &amp; TK. Segera daftarkan putra-putri Anda dan dapatkan lingkungan belajar yang menyenangkan, aman, dan penuh kasih.</p>
+          <div class="popup-info-list">
+            <div class="popup-info-row"><span class="pi-icon">✅</span><span>Usia KB: 3–4 tahun &nbsp;|&nbsp; TK A: 4–5 tahun &nbsp;|&nbsp; TK B: 5–6 tahun</span></div>
+            <div class="popup-info-row"><span class="pi-icon">✅</span><span>Periode: 1 Desember 2025 – Juni 2026</span></div>
+            <div class="popup-info-row"><span class="pi-icon">✅</span><span>Akreditasi A · BAN-PAUD</span></div>
+            <div class="popup-info-row"><span class="pi-icon">✅</span><span>Senin–Sabtu 08.00–12.00 WIB</span></div>
+          </div>
+          <div class="popup-actions">
+            <a href="https://wa.me/62271890911?text=Halo%20KB%20%26%20TK%20Santa%20Anna%2C%20saya%20ingin%20informasi%20pendaftaran%20siswa%20baru." target="_blank" rel="noopener" class="popup-btn-wa">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Daftar via WhatsApp
+            </a>
+            <button class="popup-btn-later" id="popupLater">Nanti saja</button>
+          </div>
+        </div>
+
+      </div><!-- /popup-scroll-area -->
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════
+       NAVBAR
+  ══════════════════════════════════ -->
+  <nav>
+    <a href="#" class="nav-logo">
+      <img src="img/logo.png" alt="Logo KB & TK Santa Anna" class="nav-logo-img" />
+      KB &amp; TK Santa Anna Sragen
+    </a>
+    <div class="nav-links">
+      <a href="#profil">Profil</a>
+      <a href="#program">Program</a>
+      <a href="#galeri">Galeri</a>
+      <a href="#ekskul">Ekskul</a>
+      <a href="#prestasi">Prestasi</a>
+      <a href="#guru">Guru &amp; Staff</a>
+      <a href="#kontak">Kontak</a>
+    </div>
+    <div class="hamburger"><span></span><span></span><span></span></div>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu">
+    <a href="#profil">Profil</a>
+    <a href="#program">Program</a>
+    <a href="#galeri">Galeri</a>
+    <a href="#ekskul">Ekskul</a>
+    <a href="#prestasi">Prestasi</a>
+    <a href="#guru">Guru &amp; Staff</a>
+    <a href="#kontak">Kontak</a>
+    <a href="https://wa.me/62271890911?text=Halo%20KB%20%26%20TK%20Santa%20Anna%2C%20saya%20ingin%20informasi%20pendaftaran%20siswa%20baru." target="_blank" class="mobile-cta">Daftar Sekarang →</a>
+  </div>
+
+  <!-- ══════════════════════════════════
+       HERO
+  ══════════════════════════════════ -->
+  <section id="hero">
+    <div class="hero-text">
+      <div class="hero-badge">Penerimaan Siswa Baru <span id="tahun-ajaran"></span></div>
+      <h1 class="hero-title">Tumbuh &amp; Berkembang<br><span>Bersama Santa Anna</span></h1>
+      <p class="hero-desc">Sekolah KB &amp; TK yang mendampingi anak usia 3–6 tahun belajar dan bermain dalam lingkungan yang menyenangkan, aman, dan penuh kasih sayang.</p>
+      <div class="hero-daftar-wrap">
+        <div class="hero-daftar-card">
+          <div class="hero-daftar-img-wrap">
+            <img src="img/pendaftaran.jpg" alt="Pendaftaran" class="hero-daftar-img" />
+            <div class="hero-daftar-badge">📋 Pendaftaran Dibuka</div>
+          </div>
+          <div class="hero-daftar-body">
+            <p class="hero-daftar-title">Daftarkan Si Kecil Sekarang!</p>
+            <p class="hero-daftar-sub">Hubungi kami via WhatsApp untuk informasi pendaftaran, biaya, dan jadwal.</p>
+            <a href="https://wa.me/62271890911?text=Halo%20KB%20%26%20TK%20Santa%20Anna%2C%20saya%20ingin%20informasi%20pendaftaran%20siswa%20baru." target="_blank" rel="noopener" class="btn-wa">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Daftar via WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="hv-ring hv-ring-1"></div>
+      <div class="hv-ring hv-ring-2"></div>
+      <div class="hv-center"><img src="img/logo.png" alt="Logo KB & TK Santa Anna" class="hv-center-logo" /></div>
+      <div class="hv-card hv-top"><span class="hv-card-icon">🎨</span><div><div class="hv-card-title">Seni &amp; Kreativitas</div><div class="hv-card-sub">Ekspresi diri anak</div></div></div>
+      <div class="hv-card hv-right"><span class="hv-card-icon">🏆</span><div><div class="hv-card-title">Akreditasi A</div><div class="hv-card-sub">BAN-PAUD 2018</div></div></div>
+      <div class="hv-card hv-bottom"><span class="hv-card-icon">📚</span><div><div class="hv-card-title">Calistung Fun</div><div class="hv-card-sub">Belajar sambil bermain</div></div></div>
+      <div class="hv-card hv-left"><span class="hv-card-icon">🌟</span><div><div class="hv-card-title">Sejak 1968</div><div class="hv-card-sub">58 tahun terpercaya</div></div></div>
+      <div class="hv-dot hd1"></div><div class="hv-dot hd2"></div><div class="hv-dot hd3"></div><div class="hv-dot hd4"></div><div class="hv-dot hd5"></div>
+    </div>
+  </section>
+
+  <div class="wave-wrap wave-hero"><svg viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><path d="M0,30 C360,60 1080,0 1440,30 L1440,60 L0,60 Z" fill="#eff6ff" /></svg></div>
+
+  <!-- ══════════════════════════════════
+       PROFIL
+  ══════════════════════════════════ -->
+  <section id="profil">
+    <div class="section-inner">
+      <div class="profil-grid">
+        <div class="profil-img-wrap reveal-left">
+          <div class="profil-img"><img src="img/gedung.jpg" alt="Gedung Sekolah" class="profil-img-photo" /></div>
+          <div class="profil-badge-float"><strong>A</strong><span>Terakreditasi</span></div>
+        </div>
+        <div class="reveal-right">
+          <div class="s-eyebrow">Tentang Kami</div>
+          <h2 class="s-title">Profil &amp; Sejarah Sekolah</h2>
+          <p class="profil-body">KB &amp; TK Santa Anna Sragen didirikan tahun 1968 dengan visi melahirkan generasi yang cerdas, berkarakter, dan berbahagia. Kami mendampingi tumbuh kembang anak usia dini dengan pendekatan holistik berbasis kecerdasan majemuk dan nilai-nilai karakter mulia.</p>
+          <div class="vm-tabs">
+            <button class="vm-tab active" data-tab="tk">TK (Taman Kanak-kanak)</button>
+            <button class="vm-tab" data-tab="kb">KB (Kelompok Bermain)</button>
+          </div>
+          <!-- Panel TK - Accordion -->
+          <div class="vm-panel" id="panel-tk">
+            <div class="acc-list">
+
+              <div class="acc-item open">
+                <button class="acc-head">
+                  <span class="acc-dot"></span>
+                  <span class="acc-label">Visi</span>
+                  <span class="acc-arrow">
+                    <svg viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  </span>
+                </button>
+                <div class="acc-body">
+                  <p>Terwujudnya pelayanan Pendidikan anak usia dini yang transpormatif, edukatif dan berkarakter yang dilandasi semangat doa dan kasih.</p>
+                </div>
+              </div>
+
+              <div class="acc-item">
+                <button class="acc-head">
+                  <span class="acc-dot"></span>
+                  <span class="acc-label">Misi</span>
+                  <span class="acc-arrow">
+                    <svg viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  </span>
+                </button>
+                <div class="acc-body">
+                  <p>1. Mewujudkan Pendidikan holistik yang berpusat pada anak</p>
+                  <p>2. Membangun karakter yang berlandaskan nilai-nilai Kristiani</p>
+                  <p>3. Menciptakan lingkungan belajar aman, nyaman dan inspiratif</p>
+                  <p>4. Membangun kemitraan yang efektif</p>
+                  <p>5. Mengembangkan potensi guru</p>
+                </div>
+              </div>
+
+              <div class="acc-item">
+                <button class="acc-head">
+                  <span class="acc-dot"></span>
+                  <span class="acc-label">Tujuan</span>
+                  <span class="acc-arrow">
+                    <svg viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  </span>
+                </button>
+                <div class="acc-body">
+                  <p>1. Terbentuknya generasi yang cerdas, beriman, berkarakter dan siap memasuki Pendidikan selanjutnya.</p>
+                  <p>2. Meningkatkan kualitas Pendidikan anak usia dini melalui pendekatan yang inovatif dan holistik.</p>
+                  <p>3. Terbentuknya anak yang memiliki rasa percaya diri, kreatif, inovatif, dan bertanggung jawab.</p>
+                  <p>4. Menumbuhkan semangat doa dan kasih sayang dimana pun berada.</p>
+                  <p>5. Terwujudnya visi sekolah melalui kerjasama yang efektif antara sekolah, orang tua dan gereja.</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Panel KB - Accordion -->
+          <div class="vm-panel" id="panel-kb" style="display:none;">
+            <div class="acc-list">
+
+              <div class="acc-item open">
+                <button class="acc-head">
+                  <span class="acc-dot"></span>
+                  <span class="acc-label">Visi</span>
+                  <span class="acc-arrow">
+                    <svg viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  </span>
+                </button>
+                <div class="acc-body">
+                  <p>Pelayanan pendidikan yang menyiapkan anak dalam hidup bermasyarakat, beriman, berkarakter, cerdas, kreatif, mandiri, peduli lingkungan, cinta kasih dan persaudaraan sejati.</p>
+                </div>
+              </div>
+
+              <div class="acc-item">
+                <button class="acc-head">
+                  <span class="acc-dot"></span>
+                  <span class="acc-label">Misi</span>
+                  <span class="acc-arrow">
+                    <svg viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  </span>
+                </button>
+                <div class="acc-body">
+                  <p>1. Menumbuh kembangkan peserta didik yang beriman</p>
+                  <p>2. Menumbuh kembangkan peserta didik yang berkarakter</p>
+                  <p>3. Menumbuh kembangkan peserta didik yang cerdas</p>
+                  <p>4. Menumbuh kembangkan peserta didik yang kreatif</p>
+                  <p>5. Menumbuh kembangkan peserta didik yang mandiri</p>
+                  <p>6. Menumbuh kembangkan peserta didik yang peduli lingkungan</p>
+                  <p>7. Menumbuh kembangkan peserta didik yang memiliki cinta kasih kepada sesama</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="wave-wrap wave-profil"><svg viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><path d="M0,20 C480,60 960,0 1440,30 L1440,60 L0,60 Z" fill="#ffffff" /></svg></div>
+
+  <!-- ══════════════════════════════════
+       PROGRAM
+  ══════════════════════════════════ -->
+  <section id="program">
+    <div class="section-inner">
+      <div class="prog-header reveal"><div><div class="s-eyebrow">Pembelajaran</div><h2 class="s-title">Program Unggulan Kami</h2></div><p class="s-desc">Dirancang untuk mengoptimalkan potensi setiap anak secara menyeluruh.</p></div>
+      <div class="prog-grid">
+        <div class="prog-card reveal"><span class="prog-icon">🎨</span><h3>Seni &amp; Kreativitas</h3><p>Mengembangkan ekspresi diri melalui melukis, mewarnai, kolase, dan berbagai kegiatan seni kreatif.</p></div>
+        <div class="prog-card reveal"><span class="prog-icon">🔢</span><h3>Calistung Fun</h3><p>Belajar membaca, menulis, dan berhitung dengan metode bermain yang menyenangkan dan efektif.</p></div>
+        <div class="prog-card reveal"><span class="prog-icon">🌱</span><h3>Karakter &amp; Moral</h3><p>Menanamkan sopan santun, kejujuran, dan tanggung jawab sejak usia dini.</p></div>
+        <div class="prog-card reveal"><span class="prog-icon">🏃</span><h3>Motorik &amp; Gerak</h3><p>Senam, permainan outdoor, dan aktivitas fisik untuk tumbuh kembang optimal.</p></div>
+        <div class="prog-card reveal"><span class="prog-icon">🎤</span><h3>Menyanyi</h3><p>Mengembangkan kemampuan vokal dan rasa percaya diri anak melalui kegiatan menyanyi bersama.</p></div>
+        <div class="prog-card reveal"><span class="prog-icon">🌍</span><h3>Bahasa Inggris</h3><p>Pengenalan bahasa Inggris sejak dini dengan metode interaktif yang menyenangkan.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="wave-wrap wave-program"><svg viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><path d="M0,30 C360,0 1080,60 1440,20 L1440,60 L0,60 Z" fill="#1e3a8a" /></svg></div>
+
+  <!-- ══════════════════════════════════
+       GALERI
+  ══════════════════════════════════ -->
+  <section id="galeri">
+    <div class="section-inner">
+      <div class="galeri-header reveal"><div class="s-eyebrow">Galeri</div><h2 class="s-title">Momen Keseruan Bersama</h2><p class="s-desc">Sekilas kegiatan seru anak-anak di KB &amp; TK Santa Anna.</p></div>
+    </div>
+    <div class="marquee-wrap">
+      <div class="marquee-row">
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg1.jpg" alt="Kegiatan 1"/><span>Upacara Bendera</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg2.jpg" alt="Kegiatan 2"/><span>Pagi Sunyi</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg3.jpg" alt="Kegiatan 3"/><span>Hari Profesi</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg4.jpg" alt="Kegiatan 4"/><span>Lomba Mewarnai</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg5.jpg" alt="Kegiatan 5"/><span>Intrakulikuler</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg6.jpg" alt="Kegiatan 6"/><span>Kerohanian</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg7.jpg" alt="Kegiatan 7"/><span>Bermain Peran</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg8.jpg" alt="Kegiatan 8"/><span>Latihan Menari</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg9.jpg" alt="Kegiatan 9"/><span>Bazar Makanan Tradisional</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg10.jpg" alt="Kegiatan 10"/><span>Kunjungan Pastoral Roma</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg11.jpg" alt="Kegiatan 11"/><span>Imlek</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg12.jpg" alt="Kegiatan 12"/><span>Hari Kemerdekaan</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg13.jpg" alt="Kegiatan 13"/><span>Fun Day Reflection</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg14.jpg" alt="Kegiatan 14"/><span>Edukasi Pencegahan Kebakaran</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg15.jpg" alt="Kegiatan 15"/><span>Senam Masal</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg16.jpg" alt="Kegiatan 16"/><span>Tidur Siang Bersama</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg17.jpg" alt="Kegiatan 17"/><span>Latihan Drumband</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg18.jpg" alt="Kegiatan 18"/><span>Pemeriksaan Kesehatan</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg19.jpg" alt="Kegiatan 19"/><span>Outbond Bersama</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg21.jpg" alt="Kegiatan 21"/><span>Senam Bersama</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg22.jpg" alt="Kegiatan 22"/><span>Latihan Mayoret</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg23.jpg" alt="Kegiatan 23"/><span>HUT Santa Anna</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg24.jpg" alt="Kegiatan 24"/><span>Imlek</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg25.jpg" alt="Kegiatan 25"/><span>Olahraga Bersama</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg26.jpg" alt="Kegiatan 26"/><span>Kerohanian</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg27.jpg" alt="Kegiatan 27"/><span>Edukasi Pencegahan Kebakaran</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg28.jpg" alt="Kegiatan 28"/><span>Kegiatan Di Kelas</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg29.jpg" alt="Kegiatan 29"/><span>Pawai Laudato Si</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg30.jpg" alt="Kegiatan 30"/><span>Hari Kartini</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg31.jpg" alt="Kegiatan 31"/><span>Pentas Seni</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg32.jpg" alt="Kegiatan 32"/><span>Memberi Makan Ikan</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg33.jpg" alt="Kegiatan 33"/><span>Cooking Class</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg34.jpg" alt="Kegiatan 34"/><span>Hari Profesi</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg35.jpg" alt="Kegiatan 35"/><span>Kunjungan Ke Susteran</span></div></div>
+        
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg1.jpg" alt="Kegiatan 1"/><span>Upacara Bendera</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg2.jpg" alt="Kegiatan 2"/><span>Pagi Sunyi</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg3.jpg" alt="Kegiatan 3"/><span>Hari Profesi</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg4.jpg" alt="Kegiatan 4"/><span>Lomba Mewarnai</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg5.jpg" alt="Kegiatan 5"/><span>Intrakulikuler</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg6.jpg" alt="Kegiatan 6"/><span>Kerohanian</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg7.jpg" alt="Kegiatan 7"/><span>Bermain Peran</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg8.jpg" alt="Kegiatan 8"/><span>Latihan Menari</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg9.jpg" alt="Kegiatan 9"/><span>Bazar Makanan Tradisional</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg10.jpg" alt="Kegiatan 10"/><span>Kunjungan Pastoral Roma</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg11.jpg" alt="Kegiatan 11"/><span>Imlek</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg12.jpg" alt="Kegiatan 12"/><span>Hari Kemerdekaan</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg13.jpg" alt="Kegiatan 13"/><span>Fun Day Reflection</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg14.jpg" alt="Kegiatan 14"/><span>Edukasi Pencegahan Kebakaran</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg15.jpg" alt="Kegiatan 15"/><span>Senam Masal</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg16.jpg" alt="Kegiatan 16"/><span>Tidur Siang Bersama</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg17.jpg" alt="Kegiatan 17"/><span>Latihan Drumband</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg18.jpg" alt="Kegiatan 18"/><span>Pemeriksaan Kesehatan</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg19.jpg" alt="Kegiatan 19"/><span>Outbond Bersama</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg21.jpg" alt="Kegiatan 21"/><span>Senam Bersama</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg22.jpg" alt="Kegiatan 22"/><span>Latihan Mayoret</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg23.jpg" alt="Kegiatan 23"/><span>HUT Santa Anna</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg24.jpg" alt="Kegiatan 24"/><span>Imlek</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg25.jpg" alt="Kegiatan 25"/><span>Olahraga Bersama</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg26.jpg" alt="Kegiatan 26"/><span>Kerohanian</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg27.jpg" alt="Kegiatan 27"/><span>Edukasi Pencegahan Kebakaran</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg28.jpg" alt="Kegiatan 28"/><span>Kegiatan Di Kelas</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg29.jpg" alt="Kegiatan 29"/><span>Pawai Laudato Si</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg30.jpg" alt="Kegiatan 30"/><span>Hari Kartini</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg31.jpg" alt="Kegiatan 31"/><span>Pentas Seni</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg32.jpg" alt="Kegiatan 32"/><span>Memberi Makan Ikan</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg33.jpg" alt="Kegiatan 33"/><span>Cooking Class</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg34.jpg" alt="Kegiatan 34"/><span>Hari Profesi</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg35.jpg" alt="Kegiatan 35"/><span>Kunjungan Ke Susteran</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg1.jpg" alt="Kegiatan 1"/><span>Upacara Bendera</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg2.jpg" alt="Kegiatan 2"/><span>Pagi Sunyi</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg3.jpg" alt="Kegiatan 3"/><span>Hari Profesi</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg4.jpg" alt="Kegiatan 4"/><span>Lomba Mewarnai</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg5.jpg" alt="Kegiatan 5"/><span>Intrakulikuler</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg6.jpg" alt="Kegiatan 6"/><span>Kerohanian</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg7.jpg" alt="Kegiatan 7"/><span>Bermain Peran</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg8.jpg" alt="Kegiatan 8"/><span>Latihan Menari</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg9.jpg" alt="Kegiatan 9"/><span>Bazar Makanan Tradisional</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg10.jpg" alt="Kegiatan 10"/><span>Kunjungan Pastoral Roma</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg11.jpg" alt="Kegiatan 11"/><span>Imlek</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg12.jpg" alt="Kegiatan 12"/><span>Hari Kemerdekaan</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg13.jpg" alt="Kegiatan 13"/><span>Fun Day Reflection</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg14.jpg" alt="Kegiatan 14"/><span>Edukasi Pencegahan Kebakaran</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg15.jpg" alt="Kegiatan 15"/><span>Senam Masal</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg16.jpg" alt="Kegiatan 16"/><span>Tidur Siang Bersama</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg17.jpg" alt="Kegiatan 17"/><span>Latihan Drumband</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg18.jpg" alt="Kegiatan 18"/><span>Pemeriksaan Kesehatan</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg19.jpg" alt="Kegiatan 19"/><span>Outbond Bersama</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg21.jpg" alt="Kegiatan 21"/><span>Senam Bersama</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg22.jpg" alt="Kegiatan 22"/><span>Latihan Mayoret</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg23.jpg" alt="Kegiatan 23"/><span>HUT Santa Anna</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg24.jpg" alt="Kegiatan 24"/><span>Imlek</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg25.jpg" alt="Kegiatan 25"/><span>Olahraga Bersama</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg26.jpg" alt="Kegiatan 26"/><span>Kerohanian</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg27.jpg" alt="Kegiatan 27"/><span>Edukasi Pencegahan Kebakaran</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg28.jpg" alt="Kegiatan 28"/><span>Kegiatan Di Kelas</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg29.jpg" alt="Kegiatan 29"/><span>Pawai Laudato Si</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg30.jpg" alt="Kegiatan 30"/><span>Hari Kartini</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg31.jpg" alt="Kegiatan 31"/><span>Pentas Seni</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg32.jpg" alt="Kegiatan 32"/><span>Memberi Makan Ikan</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg33.jpg" alt="Kegiatan 33"/><span>Cooking Class</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg34.jpg" alt="Kegiatan 34"/><span>Hari Profesi</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg35.jpg" alt="Kegiatan 35"/><span>Kunjungan Ke Susteran</span></div></div>
+      </div>
+      <div class="marquee-row">
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg35.jpg" alt="Kegiatan 35"/><span>Kunjungan Ke Susteran</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg34.jpg" alt="Kegiatan 34"/><span>Hari Profesi</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg33.jpg" alt="Kegiatan 33"/><span>Cooking Class</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg32.jpg" alt="Kegiatan 32"/><span>Memberi Makan Ikan</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg31.jpg" alt="Kegiatan 31"/><span>Pentas Seni</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg30.jpg" alt="Kegiatan 30"/><span>Hari Kartini</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg29.jpg" alt="Kegiatan 29"/><span>Pawai Laudato Si</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg28.jpg" alt="Kegiatan 28"/><span>Kegiatan Di Kelas</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg27.jpg" alt="Kegiatan 27"/><span>Edukasi Pencegahan Kebakaran</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg26.jpg" alt="Kegiatan 26"/><span>Kerohanian</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg25.jpg" alt="Kegiatan 25"/><span>Olahraga Bersama</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg24.jpg" alt="Kegiatan 24"/><span>Imlek</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg23.jpg" alt="Kegiatan 23"/><span>HUT Santa Anna</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg22.jpg" alt="Kegiatan 22"/><span>Latihan Mayoret</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg21.jpg" alt="Kegiatan 21"/><span>Senam Bersama</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg20.jpg" alt="Kegiatan 20"/><span>Pemberangkatan Outbond</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg19.jpg" alt="Kegiatan 19"/><span>Outbond Bersama</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg18.jpg" alt="Kegiatan 18"/><span>Pemeriksaan Kesehatan</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg17.jpg" alt="Kegiatan 17"/><span>Latihan Drumband</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg16.jpg" alt="Kegiatan 16"/><span>Tidur Siang Bersama</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg15.jpg" alt="Kegiatan 15"/><span>Senam Masal</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg14.jpg" alt="Kegiatan 14"/><span>Edukasi Pencegahan Kebakaran</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg13.jpg" alt="Kegiatan 13"/><span>Fun Day Reflection</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg12.jpg" alt="Kegiatan 12"/><span>Hari Kemerdekaan</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg11.jpg" alt="Kegiatan 11"/><span>Imlek</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg10.jpg" alt="Kegiatan 10"/><span>Kunjungan Pastoral Roma</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg9.jpg" alt="Kegiatan 9"/><span>Bazar Makanan Tradisional</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg8.jpg" alt="Kegiatan 8"/><span>Latihan Menari</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg7.jpg" alt="Kegiatan 7"/><span>Bermain Peran</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg6.jpg" alt="Kegiatan 6"/><span>Kerohanian</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg5.jpg" alt="Kegiatan 5"/><span>Intrakulikuler</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg4.jpg" alt="Kegiatan 4"/><span>Lomba Mewarnai</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg3.jpg" alt="Kegiatan 3"/><span>Hari Profesi</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg2.jpg" alt="Kegiatan 2"/><span>Pagi Sunyi</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg1.jpg" alt="Kegiatan 1"/><span>Upacara Bendera</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg35.jpg" alt="Kegiatan 35"/><span>Kunjungan Ke Susteran</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg34.jpg" alt="Kegiatan 34"/><span>Hari Profesi</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg33.jpg" alt="Kegiatan 33"/><span>Cooking Class</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg32.jpg" alt="Kegiatan 32"/><span>Memberi Makan Ikan</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg31.jpg" alt="Kegiatan 31"/><span>Pentas Seni</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg30.jpg" alt="Kegiatan 30"/><span>Hari Kartini</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg29.jpg" alt="Kegiatan 29"/><span>Pawai Laudato Si</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg28.jpg" alt="Kegiatan 28"/><span>Kegiatan Di Kelas</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg27.jpg" alt="Kegiatan 27"/><span>Edukasi Pencegahan Kebakaran</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg26.jpg" alt="Kegiatan 26"/><span>Kerohanian</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg25.jpg" alt="Kegiatan 25"/><span>Olahraga Bersama</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg24.jpg" alt="Kegiatan 24"/><span>Imlek</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg23.jpg" alt="Kegiatan 23"/><span>HUT Santa Anna</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg22.jpg" alt="Kegiatan 22"/><span>Latihan Mayoret</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg21.jpg" alt="Kegiatan 21"/><span>Senam Bersama</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg20.jpg" alt="Kegiatan 20"/><span>Pemberangkatan Outbond</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg19.jpg" alt="Kegiatan 19"/><span>Outbond Bersama</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg18.jpg" alt="Kegiatan 18"/><span>Pemeriksaan Kesehatan</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg17.jpg" alt="Kegiatan 17"/><span>Latihan Drumband</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg16.jpg" alt="Kegiatan 16"/><span>Tidur Siang Bersama</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg15.jpg" alt="Kegiatan 15"/><span>Senam Masal</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg14.jpg" alt="Kegiatan 14"/><span>Edukasi Pencegahan Kebakaran</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg13.jpg" alt="Kegiatan 13"/><span>Fun Day Reflection</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg12.jpg" alt="Kegiatan 12"/><span>Hari Kemerdekaan</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg11.jpg" alt="Kegiatan 11"/><span>Imlek</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg10.jpg" alt="Kegiatan 10"/><span>Kunjungan Pastoral Roma</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg9.jpg" alt="Kegiatan 9"/><span>Bazar Makanan Tradisional</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg8.jpg" alt="Kegiatan 8"/><span>Latihan Menari</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg7.jpg" alt="Kegiatan 7"/><span>Bermain Peran</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg6.jpg" alt="Kegiatan 6"/><span>Kerohanian</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg5.jpg" alt="Kegiatan 5"/><span>Intrakulikuler</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg4.jpg" alt="Kegiatan 4"/><span>Lomba Mewarnai</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg3.jpg" alt="Kegiatan 3"/><span>Hari Profesi</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg2.jpg" alt="Kegiatan 2"/><span>Pagi Sunyi</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg1.jpg" alt="Kegiatan 1"/><span>Upacara Bendera</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg35.jpg" alt="Kegiatan 35"/><span>Kunjungan Ke Susteran</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg34.jpg" alt="Kegiatan 34"/><span>Hari Profesi</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg33.jpg" alt="Kegiatan 33"/><span>Cooking Class</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg32.jpg" alt="Kegiatan 32"/><span>Memberi Makan Ikan</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg31.jpg" alt="Kegiatan 31"/><span>Pentas Seni</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg30.jpg" alt="Kegiatan 30"/><span>Hari Kartini</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg29.jpg" alt="Kegiatan 29"/><span>Pawai Laudato Si</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg28.jpg" alt="Kegiatan 28"/><span>Kegiatan Di Kelas</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg27.jpg" alt="Kegiatan 27"/><span>Edukasi Pencegahan Kebakaran</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg26.jpg" alt="Kegiatan 26"/><span>Kerohanian</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg25.jpg" alt="Kegiatan 25"/><span>Olahraga Bersama</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg24.jpg" alt="Kegiatan 24"/><span>Imlek</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg23.jpg" alt="Kegiatan 23"/><span>HUT Santa Anna</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg22.jpg" alt="Kegiatan 22"/><span>Latihan Mayoret</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg21.jpg" alt="Kegiatan 21"/><span>Senam Bersama</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg20.jpg" alt="Kegiatan 20"/><span>Pemberangkatan Outbond</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg19.jpg" alt="Kegiatan 19"/><span>Outbond Bersama</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg18.jpg" alt="Kegiatan 18"/><span>Pemeriksaan Kesehatan</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg17.jpg" alt="Kegiatan 17"/><span>Latihan Drumband</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg16.jpg" alt="Kegiatan 16"/><span>Tidur Siang Bersama</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg15.jpg" alt="Kegiatan 15"/><span>Senam Masal</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg14.jpg" alt="Kegiatan 14"/><span>Edukasi Pencegahan Kebakaran</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg13.jpg" alt="Kegiatan 13"/><span>Fun Day Reflection</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg12.jpg" alt="Kegiatan 12"/><span>Hari Kemerdekaan</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg11.jpg" alt="Kegiatan 11"/><span>Imlek</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg10.jpg" alt="Kegiatan 10"/><span>Kunjungan Pastoral Roma</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg9.jpg" alt="Kegiatan 9"/><span>Bazar Makanan Tradisional</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg8.jpg" alt="Kegiatan 8"/><span>Latihan Menari</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg7.jpg" alt="Kegiatan 7"/><span>Bermain Peran</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg6.jpg" alt="Kegiatan 6"/><span>Kerohanian</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg5.jpg" alt="Kegiatan 5"/><span>Intrakulikuler</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg4.jpg" alt="Kegiatan 4"/><span>Lomba Mewarnai</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg3.jpg" alt="Kegiatan 3"/><span>Hari Profesi</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg2.jpg" alt="Kegiatan 2"/><span>Pagi Sunyi</span></div></div>
+        <div class="g-card"><div class="g-inner g-photo"><img src="img/keg1.jpg" alt="Kegiatan 1"/><span>Upacara Bendera</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="wave-wrap wave-galeri"><svg viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><path d="M0,20 C360,60 1080,0 1440,40 L1440,60 L0,60 Z" fill="#eff6ff" /></svg></div>
+
+  <!-- ══════════════════════════════════
+       EKSKUL
+  ══════════════════════════════════ -->
+  <section id="ekskul">
+    <div class="section-inner">
+      <div class="reveal"><div class="s-eyebrow">Ekstrakurikuler</div><h2 class="s-title">Kegiatan Ekstra Si Kecil</h2><p class="s-desc">Pilihan ekskul beragam untuk mengasah bakat dan minat anak.</p></div>
+      <div class="ekskul-wrap">
+        <div class="ek-chip reveal"><span class="ei">🥁</span> Drumband &amp; Mayoret</div>
+        <div class="ek-chip reveal"><span class="ei">💃</span> Menari</div>
+        <div class="ek-chip reveal"><span class="ei">🎤</span> Menyanyi</div>
+        <div class="ek-chip reveal"><span class="ei">🖼️</span> Melukis</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="wave-wrap wave-ekskul"><svg viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><path d="M0,40 C480,0 960,60 1440,20 L1440,60 L0,60 Z" fill="#2563eb" /></svg></div>
+
+  <!-- ══════════════════════════════════
+       PRESTASI
+  ══════════════════════════════════ -->
+  <section id="prestasi">
+    <div class="section-inner">
+      <div class="reveal"><div class="s-eyebrow">Penghargaan</div><h2 class="s-title">Prestasi &amp; Pencapaian</h2><p class="s-desc">Kebanggaan kami bersama yang diraih selama bertahun-tahun.</p></div>
+      <div class="prestasi-grid">
+        <div class="prestasi-card reveal"><div class="prestasi-photo"><img src="img/prestasi1.jpg" alt="Olimpiade Anak Indonesia" class="prestasi-img" /></div><div class="prestasi-year">2026</div><h3>Juara 2 Sains IPA</h3><p>Olimpiade Anak Indonesia (PUSPRESNAS)</p></div>
+        <div class="prestasi-card reveal"><div class="prestasi-photo"><img src="img/prestasi2.jpg" alt="Olimpiade Sains OSN" class="prestasi-img" /></div><div class="prestasi-year">2026</div><h3>Juara 2 Sains OSN</h3><p>Olimpiade Sains OSN</p></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="wave-wrap wave-prestasi"><svg viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><path d="M0,30 C360,60 1080,0 1440,30 L1440,60 L0,60 Z" fill="#ffffff" /></svg></div>
+
+  <!-- ══════════════════════════════════
+       GURU & STAFF
+  ══════════════════════════════════ -->
+  <section id="guru">
+    <div class="section-inner">
+      <div class="reveal"><div class="s-eyebrow">Tim Kami</div><h2 class="s-title">Guru &amp; Staff</h2><p class="s-desc">Tenaga pendidik berpengalaman dan berdedikasi untuk mendampingi tumbuh kembang anak.</p></div>
+      <div class="guru-grid">
+        <div class="guru-card reveal"><div class="guru-avatar"><img src="img/guru1.jpg" alt="Ibu Dwi Ambar Sari" class="guru-foto" /></div><div class="guru-info"><h3>Ibu Dwi Ambar Sari, S.Pd</h3><span class="guru-role">Kepala Sekolah</span><p>S1 Pendidikan Anak Usia Dini</p></div></div>
+        <div class="guru-card reveal"><div class="guru-avatar"><img src="img/guru2.jpg" alt="Ibu Theresia Rani Widiyasari" class="guru-foto" /></div><div class="guru-info"><h3>Ibu Theresia Rani Widiyasari, S.Pd</h3><span class="guru-role">Guru Kelas TK A1</span><p>S1 Pendidikan Anak Usia Dini</p></div></div>
+        <div class="guru-card reveal"><div class="guru-avatar"><img src="img/guru3.jpg" alt="Ibu Cornelia Setiyani" class="guru-foto" /></div><div class="guru-info"><h3>Ibu Cornelia Setiyani, S.Pd</h3><span class="guru-role">Guru Kelas TK A2</span><p>S1 Pendidikan Anak Usia Dini</p></div></div>
+        <div class="guru-card reveal"><div class="guru-avatar"><img src="img/guru4.jpg" alt="Ibu Sri Supartini" class="guru-foto" /></div><div class="guru-info"><h3>Ibu Sri Supartini, S.Pd</h3><span class="guru-role">Guru Kelas TK B1</span><p>S1 Pendidikan Anak Usia Dini</p></div></div>
+        <div class="guru-card reveal"><div class="guru-avatar"><img src="img/guru5.jpg" alt="Ibu Is Wijayati" class="guru-foto" /></div><div class="guru-info"><h3>Ibu Is Wijayati, S.Pd</h3><span class="guru-role">Guru Kelas TK B2</span><p>S1 Pendidikan Anak Usia Dini</p></div></div>
+        <div class="guru-card reveal"><div class="guru-avatar"><img src="img/guru6.jpg" alt="Ibu Fransisca Dlaide Talla" class="guru-foto" /></div><div class="guru-info"><h3>Ibu Fransisca Dlaide Talla, S.Pd</h3><span class="guru-role">Guru Kelompok Bermain</span><p>S1 Pendidikan Anak Usia Dini</p></div></div>
+        <div class="guru-card reveal"><div class="guru-avatar"><img src="img/guru7.jpg" alt="Bapak Slamet Riyanto" class="guru-foto" /></div><div class="guru-info"><h3>Bapak Slamet Riyanto</h3><span class="guru-role">Penjaga Sekolah</span></div></div>
+        <div class="guru-card reveal"><div class="guru-avatar"><img src="img/guru8.jpg" alt="Bapak Widodo" class="guru-foto" /></div><div class="guru-info"><h3>Bapak Widodo</h3><span class="guru-role">Penjaga Sekolah</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="wave-wrap wave-guru"><svg viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><path d="M0,20 C480,60 960,0 1440,40 L1440,60 L0,60 Z" fill="#1e3a8a" /></svg></div>
+
+  <!-- ══════════════════════════════════
+       KONTAK
+  ══════════════════════════════════ -->
+  <section id="kontak">
+    <div class="section-inner">
+      <div class="reveal"><div class="s-eyebrow">Hubungi Kami</div><h2 class="s-title">Ayo Bergabung Bersama Kami</h2><p class="s-desc">Kami siap menyambut putra-putri Anda. Hubungi kami untuk informasi pendaftaran.</p></div>
+      <div class="kontak-grid reveal">
+        <div class="k-info">
+          <div class="k-row"><div class="k-icon">📍</div><div><label>Alamat</label><p>Jalan Rokan No. 15 Sragen Tengah, Kabupaten Sragen, Jawa Tengah 57211</p></div></div>
+          <div class="k-row"><div class="k-icon">📞</div><div><label>Telepon</label><p>0271-890911</p></div></div>
+          <div class="k-row"><div class="k-icon">✉️</div><div><label>Email</label><p>tk.santaanna.srg@gmail.com</p></div></div>
+          <div class="k-row"><div class="k-icon">⏰</div><div><label>Jam Operasional</label><p>Senin–Sabtu 07.00–12.00</p></div></div>
+        </div>
+        <div class="map-wrap">
+          <div class="map-header"><span class="map-label">📍 Lokasi Kami</span></div>
+          <div class="map-frame"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3956.3150979690436!2d111.01865297504862!3d-7.430340792580363!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a0349f1244419%3A0xc0568758f85d583!2sTaman%20Kanak%20Kanak%20Santa%20Anna!5e0!3m2!1sid!2sid!4v1772881037980!5m2!1sid!2sid" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+        </div>
+      </div>
+      <div class="sosmed-wrap reveal">
+        <p class="sosmed-label">Ikuti kami di</p>
+        <div class="sosmed-list">
+          <a href="https://www.instagram.com/kb.tk.santaanna?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="sosmed-btn ig"><svg viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor"/></svg>Instagram</a>
+          <a href="https://www.facebook.com/profile.php?id=61588567874767" class="sosmed-btn fb"><svg viewBox="0 0 24 24" fill="none"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Facebook</a>
+          <a href="https://youtube.com/@santaannasragen1327?si=nSesaOiac4yw9qTY" class="sosmed-btn yt"><svg viewBox="0 0 24 24" fill="none"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.4a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z" stroke="currentColor" stroke-width="2"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>YouTube</a>
+          <a href="https://wa.me/62271890911?text=Halo%20KB%20%26%20TK%20Santa%20Anna%2C%20saya%20ingin%20informasi%20pendaftaran%20siswa%20baru." target="_blank" rel="noopener" class="sosmed-btn wa"><svg viewBox="0 0 24 24" fill="none"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>WhatsApp</a>
+          <a href="https://www.tiktok.com/@kbtk.santa.anna.s?is_from_webapp=1&sender_device=pc" class="sosmed-btn tt"><svg viewBox="0 0 24 24" fill="none"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>TikTok</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════
+       FOOTER
+  ══════════════════════════════════ -->
+  <footer>
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="img/logo.png" alt="Logo KB & TK Santa Anna" class="f-logo-img" />
+        <div class="f-name">KB &amp; TK Santa Anna Sragen</div>
+        <p>Mendampingi tumbuh kembang anak usia dini dengan penuh cinta dan dedikasi sejak 1968.</p>
+        <div class="footer-sosmed">
+          <a href="https://www.instagram.com/kb.tk.santaanna?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" title="Instagram"><svg viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor"/></svg></a>
+          <a href="https://www.facebook.com/profile.php?id=61588567874767" title="Facebook"><svg viewBox="0 0 24 24" fill="none"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <a href="https://youtube.com/@santaannasragen1327?si=nSesaOiac4yw9qTY" title="YouTube"><svg viewBox="0 0 24 24" fill="none"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.4a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z" stroke="currentColor" stroke-width="2"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></a>
+          <a href="https://wa.me/62271890911" target="_blank" rel="noopener" title="WhatsApp"><svg viewBox="0 0 24 24" fill="none"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <a href="https://www.tiktok.com/@kbtk.santa.anna.s?is_from_webapp=1&sender_device=pc" title="TikTok"><svg viewBox="0 0 24 24" fill="none"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5>Navigasi</h5>
+        <a href="#profil">Profil Sekolah</a><a href="#program">Program Unggulan</a><a href="#galeri">Galeri Kegiatan</a><a href="#ekskul">Ekstrakurikuler</a><a href="#prestasi">Prestasi</a><a href="#guru">Guru &amp; Staff</a><a href="#kontak">Hubungi Kami</a>
+      </div>
+      <div class="footer-col">
+        <h5>Kontak</h5>
+        <a href="#">📍 Jalan Rokan No. 15 Sragen Tengah, Kabupaten Sragen, Jawa Tengah 57211</a>
+        <a href="#">📞 0271-890911</a>
+        <a href="#">✉️ tk.santaanna.srg@gmail.com</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 KB &amp; TK Santa Anna. Semua Hak Dilindungi.</p>
+      <div class="footer-akred">Terakreditasi A ✓</div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
